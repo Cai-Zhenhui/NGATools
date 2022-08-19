@@ -1,0 +1,26 @@
+{
+    "manifest_version":2,
+    "name":"NGA小工具",
+    "version":"1.0",
+    "description":"区域委员的NGA小工具",
+    "browser_action":
+    {
+        "default_title":"插件标题",
+        "default_popup":"popup.html"
+    },
+    "content_scripts":
+    [
+        {
+            "matches":
+            [
+                "https://bbs.nga.cn/*"
+            ],
+            "js":
+            [
+                "js/func.js"
+            ],
+            "run_at":"document_idle"
+        }
+    ],
+    "web_accessible_resources":["js/inject.js"]
+}
